@@ -34,6 +34,6 @@ int main(){
             g[y].push_back(x);
         }
         DFS(1,1.0,0);
-    printf("%.9f",res);
+    printf("%.9f\n",res);
     return 0;
 }
