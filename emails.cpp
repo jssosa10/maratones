@@ -4,9 +4,10 @@ const int MAX = 50005;
 int f[MAX];
 int is[MAX];
 int T,N,x,y,res,pos;
-void allc(int i){
-    for(int j = 1;j<=N;j++){
-        if(is[j]==0)is[j]=i;
+void ciclo(int i, int t){
+    is[i]=t;
+    if(is[f[i]]==0){
+        ciclo(f[i],t);
     }
 }
 void dfs(int i,int ct){
@@ -17,7 +18,7 @@ void dfs(int i,int ct){
             dfs(f[i],ct+1);
         }
         else if(is[f[i]]==0){
-            allc(ct);
+            ciclo(i,ct);
         }
         if(is[i]==0){
             is[i]=is[f[i]]+1;
