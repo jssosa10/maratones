@@ -1,2 +1,2 @@
-# maratones
-problemas de maratones en c++
+# Maratones
+mis soluciones a problmeas de programación competitiva.
